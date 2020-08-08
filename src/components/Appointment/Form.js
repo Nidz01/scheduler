@@ -15,11 +15,11 @@ export default function Form (props) {
   const cancel = () => {
     reset();
     return props.onCancel();
-  };
+  }
 
   const save = () => {
     return props.onSave(name, interviewer);
-  };
+  }
 
   return (
     <main className="appointment__card appointment__card--create">
