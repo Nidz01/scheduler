@@ -34,6 +34,10 @@ export default function Application(props) {
     }).catch(err => console.log(err.mesage));
   }, []);
 
+  function bookInterview(id, interview) {
+    console.log(id, interview)
+  }
+
   const appointmentList = appointments.map(appointment => {
     const interview = getInterview(state, appointment.interview)
     return (
@@ -43,6 +47,8 @@ export default function Application(props) {
       time={appointment.time}
       interview={interview}
       interviewers={interviewers}
+      bookInterview={bookInterview}
+
       >	
         <h4 className="interviewers__header text--light">interviewer</h4>	
         <ul className="interviewers__list"></ul>	

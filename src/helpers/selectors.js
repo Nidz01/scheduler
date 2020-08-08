@@ -11,7 +11,6 @@ export function getAppointmentsForDay(state, day) {
 
 export function getInterviewersForDay(state, day) {
   const foundDay = state.days.find(stateDay => day === stateDay.name);
-  console.log(foundDay)
   if (
     !foundDay ||
     !foundDay.interviewers ||
