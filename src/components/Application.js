@@ -54,6 +54,23 @@ export default function Application(props) {
     })
   }
 
+  function cancelInterview(id) {
+    const appointment = {
+      ...state.appointments[id]
+    }
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    return axios.delete(`api/appointments/${id}`).then(res => {
+      setState({
+        ...state,
+        appointments
+      })
+      return res;
+    })
+  }
+
   const appointmentList = appointments.map(appointment => {
     const interview = getInterview(state, appointment.interview)
     return (
@@ -64,7 +81,7 @@ export default function Application(props) {
       interview={interview}
       interviewers={interviewers}
       bookInterview={bookInterview}
-
+      cancelInterview={cancelInterview}
       >	
         <h4 className="interviewers__header text--light">interviewer</h4>	
         <ul className="interviewers__list"></ul>	
