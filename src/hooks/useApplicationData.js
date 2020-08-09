@@ -9,6 +9,7 @@ export function useApplicationData() {
     appointments: {},
     interviewers: {}
   });
+  
 
   useEffect(() => {
     Promise.all([
@@ -36,7 +37,11 @@ export function useApplicationData() {
     return axios.put(`api/appointments/${id}`, appointment).then(res => {
       setState({
         ...state,
-        appointments
+        appointments,
+      })
+      axios.get("/api/days")
+      .then((res)=>{
+        setState(prev => ({ ...prev, days: res.data}));
       })
       return res;
     })
@@ -53,7 +58,11 @@ export function useApplicationData() {
     return axios.delete(`api/appointments/${id}`).then(res => {
       setState({
         ...state,
-        appointments
+        appointments,
+      })
+      axios.get("/api/days")
+      .then((res)=>{
+        setState(prev => ({ ...prev, days: res.data}));
       })
       return res;
     })
