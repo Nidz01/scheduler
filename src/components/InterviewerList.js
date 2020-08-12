@@ -1,10 +1,18 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import InterviewerListItem from "components/InterviewerListItem";
 import "./InterviewerList.scss"
 
 const classNames = require("classnames");
 
 export default function InterviewerList (props) {
+
+  // code for InterviewerList component that validates the value and onChange props.
+  InterviewerList.propTypes = {
+    interviewer: PropTypes.number,
+    setInterviewer: PropTypes.func.isRequired
+  };
+
   const interviewerClass = classNames("interviewers", {
     interviewers__header: props.header,
     interviewers__list: props.list

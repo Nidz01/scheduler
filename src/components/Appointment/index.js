@@ -10,8 +10,6 @@ import Error from "components/Appointment/Error";
 
 import { useVisualMode } from "hooks/useVisualMode";
 
-
-
 import "./styles.scss";
 
 export default function Appointment (props) {
@@ -51,7 +49,7 @@ export default function Appointment (props) {
   }
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time}></Header>
       {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 
@@ -107,7 +105,6 @@ export default function Appointment (props) {
           onClose={() => back()}
         ></Error>
       )}
-      
     </article>
   )
 }
