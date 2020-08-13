@@ -8,9 +8,9 @@ Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jes
 
 !["Book Appointment"](https://github.com/Nidz01/scheduler/blob/master/docs/Book_Appointment.gif?raw=true)
 
-!["Cancel Appointment"] (https://github.com/Nidz01/scheduler/blob/master/docs/Cancel_Appointment.gif?raw=true)
+!["Cancel Appointment"](https://github.com/Nidz01/scheduler/blob/master/docs/Cancel_Appointment.gif?raw=true)
 
-!["Edit Appointment"] (https://github.com/Nidz01/scheduler/blob/master/docs/Edit_Appointment.gif?raw=true)
+!["Edit Appointment"](https://github.com/Nidz01/scheduler/blob/master/docs/Edit_Appointment.gif?raw=true)
 
 
 ## Setup
