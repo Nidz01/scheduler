@@ -1,5 +1,8 @@
 # Interview Scheduler
 
+Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jest, Cypress and Websockets to learn ReactJS. 
+
+
 ## Setup
 
 Install dependencies with `npm install`.
@@ -14,6 +17,14 @@ npm start
 
 ```sh
 npm test
+```
+
+```sh
+npm run coverage
+```
+
+```sh
+npm run cypress
 ```
 
 ## Running Storybook Visual Testbed
