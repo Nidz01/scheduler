@@ -12,7 +12,7 @@ export default function Error (props) {
         src="images/close.png"
         alt="Close"
         onClick={props.onClose}
-        />
+      />
     </main>
-  )
+  );
 }

@@ -1,3 +1,5 @@
+// Hard coded data to mock axios for running tests.
+
 const fixtures = {
   days: [
     {
@@ -53,6 +55,8 @@ const fixtures = {
   }
 };
 
+// Mock axios
+
 export default {
   get: jest.fn(url => {
     if (url === "/api/days") {
@@ -60,7 +64,6 @@ export default {
         status: 200,
         statusText: "OK",
         data: fixtures.days
-        //data: JSON.parse(JSON.stringify(fixtures.days)) 
       });
     }
 
@@ -69,7 +72,6 @@ export default {
         status: 200,
         statusText: "OK",
         data:fixtures.appointments
-        //data: JSON.parse(JSON.stringify(fixtures.days)) 
       });
     }
 
@@ -77,8 +79,7 @@ export default {
       return Promise.resolve({
         status: 200,
         statusText: "OK",
-        data: fixtures.interviewers 
-        //data: JSON.parse(JSON.stringify(fixtures.days)) 
+        data: fixtures.interviewers
       });
     }
   }),
@@ -95,4 +96,4 @@ export default {
       statusText: "No Content"
     });
   })
-}
+};

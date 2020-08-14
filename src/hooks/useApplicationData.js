@@ -1,3 +1,5 @@
+//Functions and states to use Application Data
+
 import { useEffect, useState } from "react";
 
 import axios from "axios";

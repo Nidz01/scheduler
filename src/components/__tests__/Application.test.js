@@ -1,3 +1,6 @@
+
+//Tests for the Application Component
+
 import React from "react";
 
 import Application from "components/Application";

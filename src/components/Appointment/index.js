@@ -1,3 +1,6 @@
+
+// Appointment Component with its different states
+
 import React from "react";
 
 import Header from "components/Appointment/Header";
@@ -13,6 +16,9 @@ import { useVisualMode } from "hooks/useVisualMode";
 import "./styles.scss";
 
 export default function Appointment (props) {
+
+  // Transition states of Appointment Component
+
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
@@ -25,20 +31,21 @@ export default function Appointment (props) {
 
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
-  )
+  );
 
   function save(name, interviewer) {
     const interview = {
       student: name,
       interviewer
-    }
+    };
+    
     transition(SAVING);
 
-      props
-      .bookInterview(props.id, interview)
-      .then(() => transition(SHOW))
-      .catch(error => transition(ERROR_SAVE, true));
-  }
+    props
+    .bookInterview(props.id, interview)
+    .then(() => transition(SHOW))
+    .catch(error => transition(ERROR_SAVE, true));
+  };
 
   function cancel() {
     transition(DELETING, true);
@@ -46,7 +53,7 @@ export default function Appointment (props) {
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
       .catch(error => transition(ERROR_DELETE, true));
-  }
+  };
 
   return (
     <article className="appointment" data-testid="appointment">
@@ -107,4 +114,4 @@ export default function Appointment (props) {
       )}
     </article>
   )
-}
+};

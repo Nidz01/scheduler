@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jest, Cypress and Websockets to learn ReactJS. 
+Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jest and Cypress to learn ReactJS. 
 
 ## Glimpse of Project
 

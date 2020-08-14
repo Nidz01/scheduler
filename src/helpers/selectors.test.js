@@ -1,3 +1,6 @@
+
+//Tests for validating helper functions
+
 import { getAppointmentsForDay } from "helpers/selectors";
 import { getInterview } from "helpers/selectors";
 import { getInterviewersForDay } from "helpers/selectors";
