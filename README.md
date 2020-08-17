@@ -12,6 +12,20 @@ Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jes
 
 !["Edit Appointment"](https://github.com/Nidz01/scheduler/blob/master/docs/Edit_Appointment.gif?raw=true)
 
+## Dependencies
+
+  axios
+  classnames
+  normalize.css
+  react"
+  babel
+  storybook
+  cypress
+  testing-library
+  react-test-renderer
+
+
+
 
 ## Setup
 
