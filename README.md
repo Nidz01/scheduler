@@ -14,15 +14,15 @@ Interview Scheduler is a Full Stack Web App built in ReactJS with Storybook, Jes
 
 ## Dependencies
 
-  axios
-  classnames
-  normalize.css
-  react"
-  babel
-  storybook
-  cypress
-  testing-library
-  react-test-renderer
+  - axios
+  - classnames
+  - normalize.css
+  - react"
+  - babel
+  - storybook
+  - cypress
+  - testing-library
+  - react-test-renderer
 
 
 
